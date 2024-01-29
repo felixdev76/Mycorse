@@ -10,12 +10,23 @@ namespace corsoAsp.Controllers
     {
         public IActionResult Index()
         {
-             return Content("sono la index");        
+             return View();        
         }
 
         public IActionResult Detail(string id)
         {
-            return Content($"sono Detail, ho ricevuto l'ID{id}"); 
+            //return Content($"sono Detail, ho ricevuto l'ID{id}");  ritorna un contenuto testuale
+             return View(); // ritorna una view 
         }
+    }
+
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+             return View();        
+        }
+
+
     }
 }
